@@ -1,0 +1,19 @@
+//Additional file to assist with cleaner code, file paths and overall organisation
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+
+    "baseUrl": "./",
+    "paths": {
+      "pages/*": ["pages/*"],
+      "tests/*": ["tests/*"],
+      "utils/*": ["utils/*"]
+    }
+  },
+  "include": 
+  ["tests/**/*.ts"]
+}

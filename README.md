@@ -1,0 +1,2 @@
+Key Notes:
+- To simplify the testing, .env is included and has sensitive data (dummy username/password). Standard practice would be to set these values as secret but for simplicity they have been added
