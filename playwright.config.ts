@@ -3,22 +3,20 @@ import * as dotenv from 'dotenv';
 
 dotenv.config({ path: './utils/.env' });
 
-const BASE_URL = process.env.BASE_URL as string;
-
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
  
   reporter: [
-    ['html', { open: 'never', outputFolder: 'reports/html' }],
+    ['html', { open: 'never', outputFolder: 'reports\html' }],
     ['list'],
-    ['allure-playwright', {outputFolder: 'reports/allure' }],
+    ['allure-playwright', {outputFolder: 'reports\allure' }],
   ],
 
   // Global settings for all tests
   use: {
-    baseURL: BASE_URL,
+    baseURL: process.env.BASE_URL,
     headless: true,
     screenshot: 'only-on-failure',
     viewport: { width: 1280, height: 720 },
@@ -40,6 +38,4 @@ export default defineConfig({
     },
 
   ],
-
-
 });
