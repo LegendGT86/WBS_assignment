@@ -3,7 +3,7 @@ import { test } from '../../fixture/apiFixture';
 
 test.describe('E2EBookingAPI', () => {
 
-  test('[@regression, @api] Full CRUD booking flow', async ({ request, authToken }) => {
+  test('[@smoke, @api] Full CRUD booking flow', async ({ request, authToken }) => {
 
 
     //Create the booking

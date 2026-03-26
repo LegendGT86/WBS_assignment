@@ -3,7 +3,7 @@ import { HomePage } from '../../pages/homePage';
 
 test.describe('Homepage Tests', () => {
 
-  test('[@smoke] contact form usability', async ({ page }) => {
+  test('[@regression] contact form usability', async ({ page }) => {
     const homePage = new HomePage(page);
 
     await page.goto('/');
