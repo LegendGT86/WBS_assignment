@@ -39,9 +39,7 @@ test.describe('E2EBookingAPI', () => {
     // Read booking details
     const getResponse = await request.get(`/booking/${bookingId}`);
     expect(getResponse.status()).toBe(200);
-
     const getBody = await getResponse.json();
-
     expect(getBody).toMatchObject(bookingData);
 
     //Update the booking
@@ -64,7 +62,6 @@ test.describe('E2EBookingAPI', () => {
         'Cookie': `token=${authToken}`
       }
     });
-
     expect(updateRes.status()).toBe(200);
 
     const updateBody = await updateRes.json();
@@ -75,18 +72,15 @@ test.describe('E2EBookingAPI', () => {
 
     const getUpdatedRes = await request.get(`/booking/${bookingId}`);
     const updatedBody = await getUpdatedRes.json();
-
     expect(updatedBody).toMatchObject(updatedBooking);
 
 
     //Delete the booking
-
     const deleteRes = await request.delete(`/booking/${bookingId}`, {
       headers: {
         'Cookie': `token=${authToken}`
       }
     });
-
     expect(deleteRes.status()).toBe(201);
 
     //Confirm Delete successful

@@ -20,5 +20,25 @@ Deliverables:
  - Screenshots of any failed steps
  - Testcases listed below
 
- 
+
 Testcases:
+API testcases covering scenarios:
+    Given a user creates a booking
+    When the user submits their booking details
+    Then the booking details should be available on database for retrieval
+
+    Given a user updates their existing booking
+    When the user submits the updated booking details
+    Then the updates should reflect the updated changes
+
+    Given the user decides to delete/remove their booking
+    When the request is made
+    Then the booking should be successfuly removed from database
+
+UI testcase coveratge:
+    Given a user is on the landing page
+    And the user scrolls to the bottom of said page
+    When the user fills out the required fields in the "Contact us" form
+    And the user Clicks the submit button
+    Then the form should disappear
+    And a pop up dialog box should appear confirming the form submission
