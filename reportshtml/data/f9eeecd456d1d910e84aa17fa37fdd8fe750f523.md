@@ -1,0 +1,54 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - heading "Welcome to Restful-Booker" [level=1] [ref=e6]
+      - paragraph [ref=e7]:
+        - text: An API playground created by
+        - link "Mark Winteringham" [ref=e8] [cursor=pointer]:
+          - /url: http://mwtestconsultancy.co.uk/
+        - text: for those wanting to learn more about API testing and tools
+    - paragraph [ref=e11]:
+      - link "@2bittester" [ref=e12] [cursor=pointer]:
+        - /url: https://twitter.com/2bittester
+      - text: "|"
+      - link "Website" [ref=e13] [cursor=pointer]:
+        - /url: http://mwtestconsultancy.co.uk/
+      - text: "|"
+      - link "Code" [ref=e14] [cursor=pointer]:
+        - /url: https://github.com/mwinteringham/restful-booker
+      - text: "|"
+      - link "API Docs" [ref=e15] [cursor=pointer]:
+        - /url: /apidoc/index.html
+  - generic [ref=e16]:
+    - paragraph [ref=e19]:
+      - text: Welcome to Restful-booker an API that you can use to learn more about API Testing or try out API testing tools against. Restful-booker is a Create Read Update Delete Web API that comes with authentication features and loaded with a bunch of bugs for you to explore. The API comes pre-loaded with 10 records for you to work with and resets itself every 10 minutes back to that default state. Restful-booker also comes with
+      - link "detailed API documentation" [ref=e20] [cursor=pointer]:
+        - /url: /apidoc/index.html
+      - text: to help get you started with your API testing straight away.
+    - generic [ref=e22]:
+      - heading "Support me and Restful-Booker" [level=2] [ref=e23]
+      - paragraph [ref=e24]:
+        - text: Restful-booker is a free to use API for practising testing, but if you enjoy using this API please consider supporting me by purchasing one of my books. Alternatively you can support
+        - link "Ministry of Testing" [ref=e25] [cursor=pointer]:
+          - /url: https://www.ministryoftesting.com/go-pro?utm_medium=web&utm_source=restful-booker
+        - text: who host this API by going Pro.
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - heading "Buy AI-Assisted Testing" [level=4] [ref=e28]
+        - link "Testing Web APIs" [ref=e29] [cursor=pointer]:
+          - /url: https://bit.ly/ai-testing
+          - img "Testing Web APIs" [ref=e30]
+      - generic [ref=e31]:
+        - heading "Buy Testing Web APIs" [level=4] [ref=e32]
+        - link "Testing Web APIs" [ref=e33] [cursor=pointer]:
+          - /url: https://bit.ly/testwebapis
+          - img "Testing Web APIs" [ref=e34]
+      - generic [ref=e35]:
+        - heading "Go Pro with Ministry of Testing" [level=4] [ref=e36]
+        - link "Boost your learning, go Pro" [ref=e37] [cursor=pointer]:
+          - /url: https://www.ministryoftesting.com/go-pro?utm_medium=web&utm_source=restful-booker
+          - img "Boost your learning, go Pro" [ref=e38]
+```

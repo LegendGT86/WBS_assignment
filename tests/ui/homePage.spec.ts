@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../pages/homePage';
+import { HomePage } from '../../pages/homePage';
 
 test.describe('Homepage Tests', () => {
 
@@ -7,6 +7,7 @@ test.describe('Homepage Tests', () => {
     const homePage = new HomePage(page);
 
     await page.goto('/');
+    // await page.goto(process.env.BASE_URL!);
     await homePage.contact.click();
     const contactSection = page.locator('section#contact');
     await contactSection.scrollIntoViewIfNeeded();

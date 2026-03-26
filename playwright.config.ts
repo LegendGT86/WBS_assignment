@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import * as dotenv from 'dotenv';
 
-dotenv.config({ path: './utils/.env' });
+dotenv.config();
 
 export default defineConfig({
   testDir: './tests',
@@ -9,14 +9,13 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
  
   reporter: [
-    ['html', { open: 'never', outputFolder: 'reports\html' }],
+    ['html', { open: 'never', outputFolder: 'reports/html' }],
     ['list'],
-    ['allure-playwright', {outputFolder: 'reports\allure' }],
+    ['allure-playwright', {outputFolder: 'reports/allure' }],
   ],
 
-  // Global settings for all tests
+  // Global settings
   use: {
-    baseURL: process.env.BASE_URL,
     headless: true,
     screenshot: 'only-on-failure',
     viewport: { width: 1280, height: 720 },
@@ -33,9 +32,24 @@ export default defineConfig({
   // For this assessment project, only 1 major browser will be used to save time and resources
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'ui_tests',
+      testDir: './tests/ui',
+      use: {
+        baseURL: process.env.BASE_URL!,
+        ...devices['Desktop Chrome'],
+        //run cmd npx playwright test --project=ui_tests
+      },
     },
-
+    {
+      name: 'api_tests',
+      testDir: './tests/api',
+      use: {
+        baseURL: process.env.API_BASE_URL!,
+        extraHTTPHeaders: {
+          'Accept': 'application/json',
+          ////run cmd npx playwright test --project=api_tests
+        },
+      },
+    },
   ],
 });
